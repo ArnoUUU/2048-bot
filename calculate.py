@@ -13,5 +13,5 @@ def push(matrix, d):
                 for i in range(matrix.count("gibberish")):
                     ind = matrix.index("gibberish")
                     matrix[ind] = ""
-
+        return matrix
 
