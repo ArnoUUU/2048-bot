@@ -1,3 +1,8 @@
+def switchvals(matrix, a,b):
+    matrix[a] = matrix[a] + matrix[b]
+    matrix[b] = matrix[a] - matrix[b]
+    matrix[a] = matrix[a] - matrix[b]
+    return matrix
 def moveleft(matrix):
     return push(matrix)
 def moveright(matrix):
