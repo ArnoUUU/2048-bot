@@ -7,6 +7,7 @@ def compareoptions(matrix):
     possible_moves = [left,right,up,down]
     result = [left.count(""),right.count(""), down.count(""), up.count("")]
     result.sort()
+    c = 0
     while True:
         if c == len(possible_moves):
             break
