@@ -1,3 +1,4 @@
+import random
 def addint(matrix):
     oneortwo = random.randint(1,2)
     twoorfour = oneortwo*2
