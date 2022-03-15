@@ -13,6 +13,7 @@ def push(matrix):
             for i in range(matrix.count("gibberish")):
                 ind = matrix.index("gibberish")
                 matrix[ind] = ""
+            break
     return matrix
 def switchvals(matrix, a,b):
     matrix[a] = matrix[a] + matrix[b]
