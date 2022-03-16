@@ -1,20 +1,33 @@
-
-def push(matrix):
-    while True:
-        try: 
-            ind = matrix.index("")
-            try:
-                if matrix[ind+1] != "":
-                    matrix[ind] = matrix[ind+1]
-                    matrix[ind+1] = "gibberish"
-            except Exception:
-                matrix[ind] = "gibberish"
-        except Exception:
-            for i in range(matrix.count("gibberish")):
-                ind = matrix.index("gibberish")
-                matrix[ind] = ""
-            break
-    return matrix
+def push(submatrix):
+    matrixnum = submatrix.count("")
+    for i in range(matrixnum):
+        ind = submatrix.index("")
+        submatrix.pop(ind)
+    for i in range(matrixnum):
+      submatrix.append("")
+    return submatrix
+def combine(matrix):
+    submatrix1=matrix[0-3]
+    submatrix2=matrix[4-7]
+    submatrix3=matrix[8-11]
+    submatrix4=matrix[12-15]
+    push(submatrix1)
+    push(submatrix2)
+    push(submatrix3)
+    push(submatrix4)
+    addsame(submatrix1)
+    addsame(submatrix2)
+    addsame(submatrix3)
+    addsame(submatrix4)
+    return [submatrix1[0],submatrix1[1],submatrix1[2],submatrix1[3],submatrix2[0],submatrix2[1],submatrix2[2],submatrix2[3],submatrix3[0],submatrix3[1],submatrix3[2],submatrix3[3],submatrix4[0],submatrix4[1],submatrix4[2],submatrix4[3]]
+def addsame(submatrix):
+    if submatrix[0]==submatrix[1]:
+      submatrix=[submatrix[0]+submatrix[1], submatrix[2],submatrix[3],""]
+    if submatrix[1]==submatrix[2]:
+      submatrix=[submatrix[0],submatrix[1]+submatrix[2],submatrix[3],""]
+    if submatrix[2]==submatrix[3]:
+      submatrix=[submatrix[0],submatrix[1], submatrix[2]+submatrix[3],""]
+      return submatrix
 def switchvals(matrix, a,b):
     matrix[a] = matrix[a] + matrix[b]
     matrix[b] = matrix[a] - matrix[b]
