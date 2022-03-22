@@ -52,20 +52,20 @@ def upswitch(matrix):
 def rotateright(matrix):
     return [matrix[12],matrix[8],matrix[4],matrix[0],matrix[13],matrix[9],matrix[5],matrix[1],matrix[14],matrix[10],matrix[6],matrix[2],matrix[15],matrix[11],matrix[7],matrix[3]]
 def moveleft(matrix):
-    return push(matrix)
+    return combine(matrix)
 def moveright(matrix):
     matrix = rightswitch(matrix)
-    matrix = push(matrix)
+    matrix = combine(matrix)
     matrix = rightswitch(matrix)
     return matrix
 def moveup(matrix):
     matrix = upswitch(matrix)
-    matrix = push(matrix)
+    matrix = combine(matrix)
     matrix = upswitch(matrix)
     return matrix
 def movedown(matrix):
     matrix = rotateright(matrix)
-    matrix = push(matrix)
+    matrix = combine(matrix)
     matrix = rotateright(matrix)
     matrix = rotateright(matrix)
     matrix = rotateright(matrix)
