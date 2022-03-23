@@ -1,16 +1,16 @@
 def push(submatrix):
     matrixnum = submatrix.count("")
     for i in range(matrixnum):
-        ind = submatrix.index("")
-        submatrix.pop(ind)
+      ind = submatrix.index("")
+      submatrix.pop(ind)
     for i in range(matrixnum):
       submatrix.append("")
     return submatrix
 def combine(matrix):
-    submatrix1=matrix[0-3]
-    submatrix2=matrix[4-7]
-    submatrix3=matrix[8-11]
-    submatrix4=matrix[12-15]
+    submatrix1=[matrix[0],matrix[1],matrix[2],matrix[3]]
+    submatrix2=[matrix[4],matrix[5],matrix[6],matrix[7]]
+    submatrix3=[matrix[8],matrix[9],matrix[10],matrix[11]]
+    submatrix4=[matrix[12],matrix[13],matrix[14],matrix[15]]
     push(submatrix1)
     push(submatrix2)
     push(submatrix3)
@@ -27,11 +27,12 @@ def addsame(submatrix):
       submatrix=[submatrix[0],submatrix[1]+submatrix[2],submatrix[3],""]
     if submatrix[2]==submatrix[3]:
       submatrix=[submatrix[0],submatrix[1], submatrix[2]+submatrix[3],""]
-      return submatrix
+    return submatrix
 def switchvals(matrix, a,b):
-    matrix[a] = matrix[a] + matrix[b]
-    matrix[b] = matrix[a] - matrix[b]
-    matrix[a] = matrix[a] - matrix[b]
+    c = matrix[a]
+    d = matrix[b]
+    matrix[a] = d
+    matrix[b] = c
     return matrix
 def rightswitch(matrix):
     matrix = switchvals(matrix, 0, 3)
