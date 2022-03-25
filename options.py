@@ -43,6 +43,7 @@ def rightswitch(matrix):
     matrix = switchvals(matrix, 9, 10)
     matrix = switchvals(matrix, 12, 15)
     matrix = switchvals(matrix, 13, 14)
+    return matrix
 def upswitch(matrix):
     matrix = switchvals(matrix,1,4)
     matrix = switchvals(matrix,2,8)
@@ -50,12 +51,13 @@ def upswitch(matrix):
     matrix = switchvals(matrix,6,9)
     matrix = switchvals(matrix,7,13)
     matrix = switchvals(matrix,11,14)
+    return matrix
 def rotateright(matrix):
     return [matrix[12],matrix[8],matrix[4],matrix[0],matrix[13],matrix[9],matrix[5],matrix[1],matrix[14],matrix[10],matrix[6],matrix[2],matrix[15],matrix[11],matrix[7],matrix[3]]
 def moveleft(matrix):
     return combine(matrix)
 def moveright(matrix):
-    matrix = rightswitch(matrix)
+    matrix = rightswitch(matrix)  
     matrix = combine(matrix)
     matrix = rightswitch(matrix)
     return matrix
