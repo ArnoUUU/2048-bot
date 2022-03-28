@@ -7,5 +7,5 @@ def compareoptions(matrix):
     possible_moves =[left.count(""),left,right.count(""),right,up.count(""),up,down.count(""),down]
     result = [left.count(""),right.count(""), down.count(""), up.count("")]
     result.sort()
-    x=possible_moves.index(result[0])
+    x=possible_moves.index(result[3])
     return possible_moves[x+1]
