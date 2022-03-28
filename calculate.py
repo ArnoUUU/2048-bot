@@ -4,14 +4,11 @@ def compareoptions(matrix):
     right = options.moveright(matrix)
     down = options.movedown(matrix)
     up = options.moveup(matrix)
-    possible_moves = [left,right,up,down]
+    possible_moves =[left.count(""),left,right.count(""),right,up.count(""),up,down.count(""),down]
     result = [left.count(""),right.count(""), down.count(""), up.count("")]
     result.sort()
-    c = 0
-    while True:
-        if c == len(possible_moves):
-            break
-        if result[0]>possible_moves[c]:
-            possible_moves.pop(c)
-            c = 0
-    return possible_moves[0]
+    for i in range(16):
+        num=possible_moves.count(i)
+        if num !=0:
+            x=possible_moves.index(num)
+            return possible_moves[x+1]
