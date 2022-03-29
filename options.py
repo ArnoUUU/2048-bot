@@ -11,17 +11,17 @@ def combine(matrix):
     submatrix2=[matrix[4],matrix[5],matrix[6],matrix[7]]
     submatrix3=[matrix[8],matrix[9],matrix[10],matrix[11]]
     submatrix4=[matrix[12],matrix[13],matrix[14],matrix[15]]
-    push(submatrix1)
-    push(submatrix2)
-    push(submatrix3)
-    push(submatrix4)
-    addsame(submatrix1)
-    addsame(submatrix2)
-    addsame(submatrix3)
-    addsame(submatrix4)
+    submatrix1=push(submatrix1)
+    submatrix2=push(submatrix2)
+    submatrix3=push(submatrix3)
+    submatrix4=push(submatrix4)
+    submatrix1=addsame(submatrix1)
+    submatrix2=addsame(submatrix2)
+    submatrix3=addsame(submatrix3)
+    submatrix4=addsame(submatrix4)
     return [submatrix1[0],submatrix1[1],submatrix1[2],submatrix1[3],submatrix2[0],submatrix2[1],submatrix2[2],submatrix2[3],submatrix3[0],submatrix3[1],submatrix3[2],submatrix3[3],submatrix4[0],submatrix4[1],submatrix4[2],submatrix4[3]]
 def addsame(submatrix):
-    if submatrix[0]==submatrix[1]:
+    if submatrix[0]==submatrix[1]:      
       submatrix=[submatrix[0]+submatrix[1], submatrix[2],submatrix[3],""]
     if submatrix[1]==submatrix[2]:
       submatrix=[submatrix[0],submatrix[1]+submatrix[2],submatrix[3],""]
