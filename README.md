@@ -1,4 +1,5 @@
 # 2048-bot
-A bot to beat 2048 in one of the most optimal ways
-aka a super-simple way :3
+Goal: A bot to beat 2048 in an optimal enough way to consistently win
+
+Currently: Legit just checks which move will have the most empty spots, and does it. 
 
