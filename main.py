@@ -11,6 +11,10 @@ while matrix.count(2048)==0:
   while matrix.count(2048)==0:
     try:
       matrix = addint.addint(matrix)
+      f = open("logs.txt", "a")
+      f.write(str(matrix))
+      f.close()
+      matrix = compareoptions(matrix,2)
     except Exception:
       print(matrix)
       break
