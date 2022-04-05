@@ -13,7 +13,7 @@ while matrix.count(2048)==0:
       f = open("logs.txt", "a")
       f.write(str(matrix))
       f.close()
-      matrix = compareoptions(matrix)
+      matrix = compareoptions(matrix,2)
     except Exception:
       print(matrix)
       break
