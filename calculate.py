@@ -2,8 +2,8 @@ import options
 def compareoptions(matrix,dl):
     left = options.moveleft(matrix)
     right = options.moveright(matrix)
-    down = options.movedown(matrix)
     up = options.moveup(matrix)
+    down = options.movedown(matrix)
     possible_moves =[left.count(""),left,right.count(""),right,up.count(""),up,down.count(""),down]
     if dl != 0:
         left = compareoptions(possible_moves[1],dl-1)
