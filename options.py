@@ -61,7 +61,6 @@ def upswitch(matrix):
 	matrix = switchvals(matrix,7,13)
 	matrix = switchvals(matrix,11,14)
 	return matrix
-
 #similar to pressing the left arrow key when playing 2048
 def moveleft(matrix):
 	return combine(matrix)
