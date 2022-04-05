@@ -31,6 +31,9 @@ def push(submatrix):
 	for i in range(matrixnum):
 		submatrix.append("")
 	return submatrix
+#rotates the matrix 90 degrees clockwise
+def rotateclockwise(matrix):
+	return [matrix[12],matrix[8],matrix[4],matrix[0],matrix[13],matrix[9],matrix[5],matrix[1],matrix[14],matrix[10],matrix[6],matrix[2],matrix[15],matrix[11],matrix[7],matrix[3]]
 # switches the values of two indexes in a matrix
 def switchvals(matrix, a,b):
 	c = matrix[a]
@@ -58,8 +61,7 @@ def upswitch(matrix):
 	matrix = switchvals(matrix,7,13)
 	matrix = switchvals(matrix,11,14)
 	return matrix
-def rotateclockwise(matrix):
-	return [matrix[12],matrix[8],matrix[4],matrix[0],matrix[13],matrix[9],matrix[5],matrix[1],matrix[14],matrix[10],matrix[6],matrix[2],matrix[15],matrix[11],matrix[7],matrix[3]]
+
 #similar to pressing the left arrow key when playing 2048
 def moveleft(matrix):
 	return combine(matrix)
