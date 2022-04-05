@@ -1,6 +1,10 @@
 import addint
 from calculate import compareoptions
 matrix = ["","","","","","","","","","","","","","","",""]
+
+logs = bool(input("Do you want to enable logs (this may take up a lot of space) for the failed tries? (type True if yes and False if no) Capitalization and spelling matter"))
+depth = int(input("What depth do you want me to calculate in? (positive integers only)"))
+
 #while matrix doesnt have 2048 empty logs and try again from scratch
 while matrix.count(2048)==0:
   f = open("logs.txt","w")
