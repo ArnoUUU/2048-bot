@@ -22,7 +22,7 @@ def combine(matrix):
 	submatrix3=addsame(submatrix3)
 	submatrix4=addsame(submatrix4)
 	return [submatrix1[0],submatrix1[1],submatrix1[2],submatrix1[3],submatrix2[0],submatrix2[1],submatrix2[2],submatrix2[3],submatrix3[0],submatrix3[1],submatrix3[2],submatrix3[3],submatrix4[0],submatrix4[1],submatrix4[2],submatrix4[3]]
-#this pop and appends all fo teh null strings in the submatrix
+#this pops and appends all of the null strings in the submatrix
 def push(submatrix):
 	matrixnum = submatrix.count("")
 	for i in range(matrixnum):
