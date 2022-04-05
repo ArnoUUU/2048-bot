@@ -1,4 +1,5 @@
 import random
+# adds a 2 or a 4 in a random spot in the "matrix"
 def addint(matrix):
 	oneortwo = random.randint(1,2)
 	twoorfour = oneortwo*2

@@ -1,4 +1,5 @@
 import options
+#uses xX! RECURSION !Xx to determine the move that will have the most null strings
 def compareoptions(matrix,dl):
 	left = options.moveleft(matrix)
 	right = options.moveright(matrix)
