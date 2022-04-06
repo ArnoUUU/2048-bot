@@ -21,13 +21,10 @@ while matrix.count(2048)==0:
     try:
       matrix = addint.addint(matrix)
       f = open("logs.txt", "a")
-      f.write("Next move is: ")
-      f.write(str(matrix[0],matrix[1],matrix[2],matrix[3]))
-      f.write(str(matrix[4],matrix[5],matrix[6],matrix[7]))
-      f.write(str(matrix[8],matrix[9],matrix[10],matrix[11]))
-      f.write(str(matrix[12],matrix[13],matrix[14],matrix[15]))
-      f.write("")
-      f.write("")
+      f.write("Next move is: "+"\n")
+      f.write(str(matrix))
+      f.write("\n")
+      f.write("\n")
       f.close()
       matrix = compareoptions(matrix,depth)
     except Exception:
