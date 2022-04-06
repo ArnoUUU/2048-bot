@@ -10,12 +10,14 @@ chore: everythign that you cant name otherwise
 
 docs: updated docs
 
+E (inconsequential and insignificant change)
+
 fix: bugfixes
 
 feat: new feature
 
-subfeat: part of a feature, but not completely a feature
-
-E (inconsequential and insignificant change)
+looks: improves the UI's looks
 
 perf: improved performace
+
+subfeat: part of a feature, but not completely a feature
