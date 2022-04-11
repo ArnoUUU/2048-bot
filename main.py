@@ -16,7 +16,7 @@ while matrix.count(2048)==0:
   f.write("Game #"+str(gamenum))
   f.close()
   matrix = ["","","","","","","","","","","","","","","",""]
-  #while matrix doesnt have 2048, claculate the best move and do it
+  #while matrix doesnt have 2048, calculate the best move and do it
   while matrix.count(2048)==0:
     try:
       matrix = addint.addint(matrix)
