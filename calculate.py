@@ -11,6 +11,7 @@ def compareoptions(matrix,dl):
 		right = compareoptions(possible_moves[3],dl-1)
 		up = compareoptions(possible_moves[5],dl-1)
 		down = compareoptions(possible_moves[7],dl-1)
+	possible_moves =[left.count(""),left,right.count(""),right,up.count(""),up,down.count(""),down]
 	result = [left.count(""),right.count(""), down.count(""), up.count("")]
 	result.sort()
 	return possible_moves[possible_moves.index(result[3])+1]
