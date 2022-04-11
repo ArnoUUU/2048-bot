@@ -13,7 +13,7 @@ while matrix.count(2048)==0:
   gamenum += 1
   f = open("logs.txt", logs)
   f.write("")
-  f.write("Game #"+str(gamenum))
+  f.write("Game #"+str(gamenum), "\n")
   f.close()
   matrix = ["","","","","","","","","","","","","","","",""]
   #while matrix doesnt have 2048, calculate the best move and do it
