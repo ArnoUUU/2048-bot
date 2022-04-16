@@ -5,12 +5,11 @@ def compareoptions(matrix,dl):
 	right = options.moveright(matrix)
 	up = options.moveup(matrix)
 	down = options.movedown(matrix)
-	possible_moves =[left.count(""),left,right.count(""),right,up.count(""),up,down.count(""),down]
 	if dl != 0:
-		left = compareoptions(possible_moves[1],dl-1)
-		right = compareoptions(possible_moves[3],dl-1)
-		up = compareoptions(possible_moves[5],dl-1)
-		down = compareoptions(possible_moves[7],dl-1)
+		left = compareoptions(left,dl-1)
+		right = compareoptions(right,dl-1)
+		up = compareoptions(up,dl-1)
+		down = compareoptions(down,dl-1)
 	possible_moves =[left.count(""),left,right.count(""),right,up.count(""),up,down.count(""),down]
 	result = [left.count(""),right.count(""), down.count(""), up.count("")]
 	result.sort()
