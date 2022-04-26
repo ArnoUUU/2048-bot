@@ -8,7 +8,7 @@ WIN_HEIGHT = 350
 
 WIN = pygame.display.setmode(())
 
-clock = pyagem.time.Clock()
+clock = pygame.time.Clock()
 
 run = True
 while run:
