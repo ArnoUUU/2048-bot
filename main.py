@@ -1,5 +1,5 @@
 import addint
-from calculate import compareoptions
+from calculate import nullstrings
 matrix = ["","","","","","","","","","","","","","","",""]
 gamenum = 0
 logs = bool(input("Do you want to enable logs (this may take up a lot of space) for the failed tries? (type True if yes and False if no) Capitalization and spelling matter"))
@@ -26,7 +26,7 @@ while matrix.count(2048)==0:
       f.write("\n")
       f.write("\n")
       f.close()
-      matrix = compareoptions(matrix,depth)
+      matrix = nullstrings(matrix,depth)
     except Exception:
       print(matrix)
       break
