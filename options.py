@@ -9,10 +9,10 @@ def addsame(submatrix):
 	return submatrix
 #this is where all the computation happens when you moveleft. (the matrix will be ordered in a way )
 def combine(matrix):
-	submatrix1=[matrix[0],matrix[1],matrix[2],matrix[3]]
-	submatrix2=[matrix[4],matrix[5],matrix[6],matrix[7]]
-	submatrix3=[matrix[8],matrix[9],matrix[10],matrix[11]]
-	submatrix4=[matrix[12],matrix[13],matrix[14],matrix[15]]
+	submatrix1=[matrix[0:3]]
+	submatrix2=[matrix[4:7]]
+	submatrix3=[matrix[8:11]]
+	submatrix4=[matrix[12:15]]
 	submatrix1=push(submatrix1)
 	submatrix2=push(submatrix2)
 	submatrix3=push(submatrix3)
