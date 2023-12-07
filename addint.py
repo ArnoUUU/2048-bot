@@ -3,12 +3,12 @@ import random
 def addint(matrix):
 	oneortwo = random.randint(1,2)
 	twoorfour = oneortwo*2
-	rando = 0
+	randomax = 0
 	for i in range(matrix.count("")):
-		rando += 1
+		randomax += 1
 		ind = matrix.index("")
-		matrix[ind] = str(rando)
-	spot = random.randint(1, rando)
+		matrix[ind] = str(randomax)
+	spot = random.randint(1, randomax)
 	ind = matrix.index(str(spot))
 	matrix[ind] = twoorfour
 	for i in range(len(matrix)):
