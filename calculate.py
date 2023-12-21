@@ -9,26 +9,32 @@ def nulls(matrix):
     return nullist
 
 
+def search(Node root, d):
+    left = options.moveleft(GameState)
+    right = options.moveright(GameState)
+    up = options.moveup(GameState)
+    down = options.movedown(GameState)
+    root.AddChild(left, )
 # uses xX! RECURSION !Xx to determine the move that will have the most null strings
-def compareoptions(matrix, dl):
-    left = options.moveleft(matrix)
-    right = options.moveright(matrix)
-    up = options.moveup(matrix)
-    down = options.movedown(matrix)
-    if dl != 0:
-        null = []
-        null = nulls(matrix)
-        for i in range(len(null)):
-            matrix[null[i]] = 2
-            left2 = compareoptions(left, dl - 1)
-            right2 = compareoptions(right, dl - 1)
-            up2 = compareoptions(up, dl - 1)
-            down2 = compareoptions(down, dl - 1)
-            matrix[null[i]] = 4
-            left4 = compareoptions(left, dl - 1)
-            right4 = compareoptions(right, dl - 1)
-            up4 = compareoptions(up, dl - 1)
-            down4 = compareoptions(down, dl - 1)
+def recursor(GameState, d):
+    left = options.moveleft(GameState)
+    right = options.moveright(GameState)
+    up = options.moveup(GameState)
+    down = options.movedown(GameState)
+    if d == 0:
+        return evaluator(GameState.matrix)
+    null = nulls(GameState.matrix)
+    for i in range(len(null)):
+        GameState.matrix[null[i]] = 2
+        left2 = recursor(left, d - 1)
+        right2 = recursor(right, d - 1)
+        up2 = recursor(up, d - 1)
+        down2 = recursor(down, d - 1)
+        GameState.matrix[null[i]] = 4
+        left4 = recursor(left, d - 1)
+        right4 = recursor(right, d - 1)
+        up4 = recursor(up, d - 1)
+        down4 = recursor(down, d - 1)
     avgs = [
         	(left2.count("") + left4.count("")) / 2,
         "l",
@@ -55,4 +61,5 @@ def compareoptions(matrix, dl):
         return up
     if best == "p":
         return down
-def evaluator
+def evaluator():
+    return 

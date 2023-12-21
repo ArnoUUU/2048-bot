@@ -1,6 +1,6 @@
 import random
 # adds a 2 or a 4 in a random spot in the "matrix"
-def addint(matrix):
+def randadd(matrix):
 	oneortwo = random.randint(1,2)
 	twoorfour = oneortwo*2
 	randomax = 0
